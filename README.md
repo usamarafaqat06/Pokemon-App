@@ -1,11 +1,11 @@
 
 
 Welcome to the Pokemon App Internship Project!
-The Pokémon App is a web application designed to capture the essence of the beloved Pokémon  and provide a unique and immersive experience to people of all ages.
--In this app  user can  view  pokemon card can find any card using its name .
--User can view details of all the pokemon.
--furthermore User can also add his favourtie card 
-- User can compare two card with their detail to find out which one got more power and got upper hand among the other one.
+The Pokémon App is a web application designed to capture the essence of the beloved Pokémon  and provide a unique and immersive experience to people of all ages
+.In this app  user can  view  pokemon card can find any card using its name 
+.User can view details of all the pokemon
+.furthermore User can also add his favourtie card 
+. User can compare two card with their detail to find out which one got more power and got upper hand among the other one.
 
 
  
