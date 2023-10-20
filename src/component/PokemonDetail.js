@@ -9,7 +9,7 @@ function PokemonDetail({ pokemonDetail }) {
   return (
     <>
       <div className="relative container mx-auto py-10">
-        <div className="border  px-2 lg:p-[50px] rounded-lg bg-white shadow-xl  mx-auto w-[280px] md:w-[500px]">
+        <div className="border  px-2 lg:p-[50px] rounded-lg bg-white shadow-xl   w-[300px] mx-auto md:w-[500px]">
           <div className="flex flex-col items-center gap-x-[30px]">
             <div className="py-[20px]">
               <span className="block text-center text-[30px] text-[#333] font-sans font-bold">
