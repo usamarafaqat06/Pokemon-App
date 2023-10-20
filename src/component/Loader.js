@@ -4,7 +4,7 @@ const Loader = () => {
   let loading = true;
   let color = "#000";
   return (
-    <div className="flex justify-center items-center h-[100vh] w-[100%]">
+    <div className="flex justify-center items-center h-screen">
       <BeatLoader
         color={color}
         loading={loading}
