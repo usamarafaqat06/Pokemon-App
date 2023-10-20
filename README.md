@@ -1,4 +1,17 @@
+
+
+Welcome to the Pokemon App Internship Project!
+The Pokémon App is a web application designed to capture the essence of the beloved Pokémon  and provide a unique and immersive experience to people of all ages
+.In this app  user can  view  pokemon card can find any card using its name 
+.User can view details of all the pokemon
+.furthermore User can also add his favourtie card 
+. User can compare two card with their detail to find out which one got more power and got upper hand among the other one.
+
+
+ 
 # Getting Started with Create React App
+
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -14,10 +27,19 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
+ ### Versions
+I am using the following versions listed below.
+ - Node Version v18.16.0
+ - React Version: "^18.2.0",
+ - React-redux: "^8.1.3",
+ - @Reduxjs/toolkit: "^1.9.7",
+ 
 ### `npm test`
 
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+
+
 
 ### `npm run build`
 
