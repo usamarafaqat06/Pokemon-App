@@ -5,11 +5,11 @@ import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import { useNavigate } from "react-router-dom";
 function PokemonDetail({ pokemonDetail }) {
   const navigate = useNavigate();
-   
+
   return (
     <>
       <div className="relative container mx-auto py-10">
-        <div className="border  px-2 lg:p-[50px] rounded-lg bg-white shadow-xl w-full mx-auto w-[300px] md:w-[500px]">
+        <div className="border  px-2 lg:p-[50px] rounded-lg bg-white shadow-xl  mx-auto w-[280px] md:w-[500px]">
           <div className="flex flex-col items-center gap-x-[30px]">
             <div className="py-[20px]">
               <span className="block text-center text-[30px] text-[#333] font-sans font-bold">
@@ -32,7 +32,7 @@ function PokemonDetail({ pokemonDetail }) {
             <h3 className="block pb-[15px] text-center text-[18px] text-[#333] font-sans font-bold">
               Types
             </h3>
-            <ul className="flex justify-center gap-x-[10px] ">
+            <ul className="flex justify-center flex-wrap  gap-[10px] ">
               {pokemonDetail.types.map((type, index) => (
                 <li
                   key={index}
@@ -47,7 +47,7 @@ function PokemonDetail({ pokemonDetail }) {
             <h3 className="block text-center pb-[15px] text-[18px] text-[#333] font-sans font-bold">
               Abilities
             </h3>
-            <ul className="flex justify-center gap-x-[10px]">
+            <ul className="flex justify-center flex-wrap   gap-[10px]">
               {pokemonDetail.abilities.map((ability, index) => (
                 <li
                   key={index}
