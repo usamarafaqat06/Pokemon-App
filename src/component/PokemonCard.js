@@ -21,7 +21,7 @@ function PokemonCard({ pokemonData }) {
               <h2 className="block "> {pokemonData.name}</h2>
               <button
                 onClick={() => toggleFavorite(pokemonData)}
-                className={` font-bold py-2 absolute right-[20px] top-[20px]  ${
+                className={` font-bold  absolute right-[20px] top-[15px]  ${
                   isFavorite ? "text-[red]" : " text-[gray]"
                 } text-[25px] block rounded-md  transition-colors duration-300`}
               >
