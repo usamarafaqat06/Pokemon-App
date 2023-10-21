@@ -153,7 +153,7 @@ function PokemonPage() {
           <div className={`${page === 1 ? "hidden" : "block"}`}>
             <button
               onClick={() => setPage(page - 1)}
-                className="w-12 h-12 bg-white flex items-center font-bold justify-center shadow-lg rounded-full fixed  md:left-[30px] left-[10px]   top-[50%] transition duration-500 hover:bg-[gray] "
+                className="w-12 h-12 bg-white flex items-center font-bold justify-center shadow-lg rounded-full absolute  md:left-[30px] left-[10px]   top-[50%] transition duration-500 hover:bg-[gray] "
             >
               <FontAwesomeIcon icon={faChevronLeft} />
             </button>
@@ -170,7 +170,7 @@ function PokemonPage() {
             {pokemonData && (
               <button
                 onClick={() => setPage(page + 1)}
-                                className="w-12 h-12 bg-white flex items-center justify-center font-bold shadow-lg rounded-full fixed right-[10px] xl:right-[30px]  top-[50%] transition duration-500 hover:bg-[gray]"
+                                className="w-12 h-12 bg-white flex items-center justify-center font-bold shadow-lg rounded-full absolute right-[10px] xl:right-[30px]  top-[50%] transition duration-500 hover:bg-[gray]"
               >
                 <FontAwesomeIcon icon={faChevronRight} />
               </button>
