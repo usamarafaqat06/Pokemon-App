@@ -10,12 +10,13 @@ function FavouritePokemonPage() {
   const navigate = useNavigate();
 
   return (
-    <Tilt>
+ 
       <div className="relative container mx-auto pt-[50px] px-5">
         <h1 className="text-center font-bold py-5">Favorite Pokémon</h1>
         {favorites.length === 0 ? (
           <h3 className="text-center ">No favorite items yet.</h3>
         ) : (
+             <Tilt>
           <div className="flex items-center justify-center gap-5 flex-wrap">
             {favorites.map((item) => (
               <div className="border relative   rounded-lg bg-white shadow-xl w-[300px]  lg:w-[350px]">
@@ -68,9 +69,10 @@ function FavouritePokemonPage() {
               </div>
             ))}
           </div>
+</Tilt>
         )}
       </div>
-    </Tilt>
+    
   );
 }
 
