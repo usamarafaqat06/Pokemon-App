@@ -4,8 +4,8 @@ const Loader = () => {
   return (
     <>
    
-    <div className="flex items-center justify-center h-screen">
-      <div role="status " className="flex items-center">
+    <div className="fixed top-[50%] left-[50%]">
+      <div role="status">
         <svg
           aria-hidden="true"
           className="inline w-8 h-8 mr-2 text-gray-200 animate-spin dark:text-gray-600 fill-blue-600"
