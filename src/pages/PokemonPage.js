@@ -93,6 +93,12 @@ function PokemonPage() {
   const filteredPokemons = pokemonData.filter((item) =>
     item.name.trim().toLowerCase().includes(filterText.trim().toLowerCase())
   );
+  const previousPageHandler = () => {
+    setPage(page - 1);
+  };
+  const nextPageHandler = () => {
+    setPage(page + 1);
+  };
 
   return (
     <>
@@ -155,7 +161,7 @@ function PokemonPage() {
             }`}
           >
             <button
-              onClick={() => setPage(page - 1)}
+              onClick={previousPageHandler}
               className="w-12 h-12 bg-white flex items-center font-bold justify-center shadow-lg rounded-full absolute  lg:left-[-30px] xl:left-[-10px] left-[10px] top-[40vh] transition duration-500 hover:bg-[gray]"
             >
               <FontAwesomeIcon icon={faChevronLeft} />
@@ -175,7 +181,7 @@ function PokemonPage() {
           >
             {pokemonData && (
               <button
-                onClick={() => setPage(page + 1)}
+                onClick={nextPageHandler}
                 className="w-12 h-12 bg-white flex items-center justify-center font-bold shadow-lg rounded-full absolute right-[10px]  lg:right-[-30px] xl:right-[-10px] top-[40vh] transition duration-500 hover:bg-[gray]"
               >
                 <FontAwesomeIcon icon={faChevronRight} />
