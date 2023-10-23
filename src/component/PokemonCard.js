@@ -15,7 +15,7 @@ function PokemonCard({ pokemonData }) {
   return (
     <>
       <Tilt>
-        <div className="border relative   rounded-lg bg-white shadow-xl w-[310px]  lg:w-[360px]">
+        <div className="border relative   rounded-lg bg-white shadow-xl w-[300px]  xl:w-[360px]">
           <div className="px-2 py-4">
             <div className="flex justify-center text-[22px] text-[#333] font-sans font-bold capitalize gap-x-[20px]">
               <h2 className="block "> {pokemonData.name}</h2>

@@ -98,7 +98,7 @@ function PokemonPage() {
     <>
       {isError && <span>Error fetching data</span>}
 
-      <div className="flex justify-between items-start py-5 px-2 w-full mx-auto pt-[50px] px:lg-[100px]">
+      <div className="container mx-auto flex justify-between items-start py-5 px-2  xl:px-0   pt-[50px]  ">
         <input
           onChange={(e) => setFilterText(e.target.value)}
           className="w-[130px] md:w-[160px] h-10 px-4 text-[13px] md:text-[14px]  py-2 text-gray-800 border-2 border-gray-300 rounded-md focus:outline-none"
@@ -156,7 +156,7 @@ function PokemonPage() {
           >
             <button
               onClick={() => setPage(page - 1)}
-              className="w-12 h-12 bg-white flex items-center font-bold justify-center shadow-lg rounded-full absolute md:left-[-30px] left-[10px] top-[40vh] transition duration-500 hover:bg-[gray]"
+              className="w-12 h-12 bg-white flex items-center font-bold justify-center shadow-lg rounded-full absolute  lg:left-[-30px] xl:left-[-10px] left-[10px] top-[40vh] transition duration-500 hover:bg-[gray]"
             >
               <FontAwesomeIcon icon={faChevronLeft} />
             </button>
@@ -176,7 +176,7 @@ function PokemonPage() {
             {pokemonData && (
               <button
                 onClick={() => setPage(page + 1)}
-                className="w-12 h-12 bg-white flex items-center justify-center font-bold shadow-lg rounded-full absolute right-[10px] xl:right-[-30px] top-[40vh] transition duration-500 hover:bg-[gray]"
+                className="w-12 h-12 bg-white flex items-center justify-center font-bold shadow-lg rounded-full absolute right-[10px]  lg:right-[-30px] xl:right-[-10px] top-[40vh] transition duration-500 hover:bg-[gray]"
               >
                 <FontAwesomeIcon icon={faChevronRight} />
               </button>
