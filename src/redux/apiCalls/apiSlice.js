@@ -16,7 +16,6 @@ export const apiSlice = createApi({
     }),
     filterPokemonByGeneration: builder.query({
       query: () => `generation/`,
-      Response: (res) => res.results.map((item) => item.name),
     }),
     filterPokemonByGenerationName: builder.query({
       query: (name) => `generation/${name}`,
