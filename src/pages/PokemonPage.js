@@ -145,33 +145,30 @@ function PokemonPage() {
                 </div>
               ))
             ) : (
-              <>
-                <div className="text-red-500">
-                  No Pokémon found by this name.
-                </div>
-                {!filteredPokemons &&
-                  pokemonData.map((item) => (
-                    <div key={item.id}>
-                      <PokemonCard pokemonData={item} />
-                    </div>
-                  ))}
-              </>
+              <div className="text-red-500">No Pokémon found by this name.</div>
             )}
           </div>
 
-          <div className={`${page === 1 ? "hidden" : "block"}`}>
+          <div
+            className={`${
+              page === 1 || filteredPokemons.length === 0 ? "hidden" : "block"
+            }`}
+          >
             <button
               onClick={() => setPage(page - 1)}
-              className="w-12 h-12 bg-white flex items-center font-bold justify-center shadow-lg rounded-full absolute  md:left-[-30px] left-[10px]   top-[40vh] transition duration-500 hover:bg-[gray] "
+              className="w-12 h-12 bg-white flex items-center font-bold justify-center shadow-lg rounded-full absolute md:left-[-30px] left-[10px] top-[40vh] transition duration-500 hover:bg-[gray]"
             >
               <FontAwesomeIcon icon={faChevronLeft} />
             </button>
           </div>
+
           <div
             className={`${
-              pokemon &&
-              pokemon.results.index === pokemon &&
-              pokemon.results.length - 1
+              (pokemon &&
+                filteredPokemons.length > 0 &&
+                pokemon.results.index === pokemon &&
+                pokemon.results.length - 1) ||
+              filteredPokemons.length === 0
                 ? "hidden"
                 : "block"
             }`}
@@ -179,7 +176,7 @@ function PokemonPage() {
             {pokemonData && (
               <button
                 onClick={() => setPage(page + 1)}
-                className="w-12 h-12 bg-white flex items-center justify-center font-bold shadow-lg rounded-full absolute right-[10px] xl:right-[-30px]  top-[40vh] transition duration-500 hover:bg-[gray]"
+                className="w-12 h-12 bg-white flex items-center justify-center font-bold shadow-lg rounded-full absolute right-[10px] xl:right-[-30px] top-[40vh] transition duration-500 hover:bg-[gray]"
               >
                 <FontAwesomeIcon icon={faChevronRight} />
               </button>
