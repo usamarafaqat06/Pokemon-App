@@ -1,5 +1,6 @@
 // PokemonDetail.js
 import React from "react";
+
 function PokemonDetail({ pokemonDetail }) {
   return (
     <>
