@@ -28,5 +28,4 @@ export const {
   useGetPokemonByNameQuery,
   useFilterPokemonByGenerationQuery,
   useFilterPokemonByGenerationNameQuery,
-  useGetPokemonBySpeciesQuery,
 } = apiSlice;
