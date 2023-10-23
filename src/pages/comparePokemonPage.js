@@ -23,7 +23,7 @@ function ComparePokemonPage() {
             type="text"
             placeholder="Search Name"
             value={pokemonName1}
-            onChange={(e) => setPokemonName1(e.target.value.toLowerCase())}
+            onChange={(e) => setPokemonName1(e.target.value)}
           />
           {pokemonName2 !== "" && isLoadingData1 ? (
             <Loader />
