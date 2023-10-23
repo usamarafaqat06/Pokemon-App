@@ -91,7 +91,7 @@ function PokemonPage() {
   };
 
   const filteredPokemons = pokemonData.filter((item) =>
-    item.name.toLowerCase().includes(filterText.toLowerCase())
+    item.name.trim().toLowerCase().includes(filterText.trim().toLowerCase())
   );
 
   return (
@@ -138,22 +138,31 @@ function PokemonPage() {
       {!loading && pokemonData && (
         <div className="relative container mx-auto py-[50px] flex items-center justify-center">
           <div className="flex items-center justify-center gap-10 flex-wrap">
-            {filteredPokemons.length > 0
-              ? filteredPokemons.map((item) => (
-                  <div key={item.id}>
-                    <PokemonCard pokemonData={item} />
-                  </div>
-                ))
-              : pokemonData.map((item) => (
-                  <div key={item.id}>
-                    <PokemonCard pokemonData={item} />
-                  </div>
-                ))}
+            {filteredPokemons.length > 0 ? (
+              filteredPokemons.map((item) => (
+                <div key={item.id}>
+                  <PokemonCard pokemonData={item} />
+                </div>
+              ))
+            ) : (
+              <>
+                <div className="text-red-500">
+                  No Pokémon found by this name.
+                </div>
+                {!filteredPokemons &&
+                  pokemonData.map((item) => (
+                    <div key={item.id}>
+                      <PokemonCard pokemonData={item} />
+                    </div>
+                  ))}
+              </>
+            )}
           </div>
+
           <div className={`${page === 1 ? "hidden" : "block"}`}>
             <button
               onClick={() => setPage(page - 1)}
-                className="w-12 h-12 bg-white flex items-center font-bold justify-center shadow-lg rounded-full absolute  md:left-[-30px] left-[10px]   top-[40vh] transition duration-500 hover:bg-[gray] "
+              className="w-12 h-12 bg-white flex items-center font-bold justify-center shadow-lg rounded-full absolute  md:left-[-30px] left-[10px]   top-[40vh] transition duration-500 hover:bg-[gray] "
             >
               <FontAwesomeIcon icon={faChevronLeft} />
             </button>
@@ -170,7 +179,7 @@ function PokemonPage() {
             {pokemonData && (
               <button
                 onClick={() => setPage(page + 1)}
-                                className="w-12 h-12 bg-white flex items-center justify-center font-bold shadow-lg rounded-full absolute right-[10px] xl:right-[-30px]  top-[40vh] transition duration-500 hover:bg-[gray]"
+                className="w-12 h-12 bg-white flex items-center justify-center font-bold shadow-lg rounded-full absolute right-[10px] xl:right-[-30px]  top-[40vh] transition duration-500 hover:bg-[gray]"
               >
                 <FontAwesomeIcon icon={faChevronRight} />
               </button>
