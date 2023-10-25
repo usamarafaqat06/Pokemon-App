@@ -16,10 +16,10 @@ function ComparePokemonPage() {
   return (
     <div>
       <h1 className="text-center font-bold mt-[60px]">Compare Pokémon</h1>
-      <div className=" container px-[10px] mx-auto  mt-[60px] flex flex-col justify-center lg:flex-row justify-between">
+      <div className=" container px-[10px] mx-auto  mt-[30px] flex flex-col justify-center lg:flex-row justify-between">
         <div className="  md:w-[50%] mx-auto   flex items-center flex-col   ">
           <input
-            className="w-[200px] h-10 px-4  ms-[45px]  mb-[10px] md:ms-0 lg:mb-0 text-gray-800 border-2 border-gray-300 rounded-md self-start lg:self-center   focus:outline-none"
+            className="w-[200px] h-10 px-4    mb-[10px] md:ms-0 lg:mb-0 text-gray-800 border-2 border-gray-300 rounded-md self-start lg:self-center   focus:outline-none"
             type="text"
             placeholder="Search Name"
             value={pokemonName1}
@@ -36,9 +36,9 @@ function ComparePokemonPage() {
           ) : null}
         </div>
 
-        <div className="  md:w-[50%] w-[50%] mx-auto flex items-center  flex-col">
+        <div className="  md:w-[50%]  mx-auto flex items-center  flex-col">
           <input
-            className="w-[200px] h-10 px-4 py-2 ms-[45px] md:ms-0   text-gray-800 border-2 border-gray-300 self-start rounded-md self-start lg:self-center  focus:outline-none "
+            className="w-[200px] h-10 px-4 py-2  md:ms-0   text-gray-800 border-2 border-gray-300  rounded-md self-start lg:self-center  focus:outline-none "
             type="text"
             placeholder="Search Name"
             value={pokemonName2}
