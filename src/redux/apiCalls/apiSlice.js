@@ -9,7 +9,6 @@ export const apiSlice = createApi({
   endpoints: (builder) => ({
     getPokemonData: builder.query({
       query: (page) => `pokemon/?offset=${(page - 1) * 6}&limit=6`,
-      providesTags: ["Pokemon"],
     }),
     getPokemonByName: builder.query({
       query: (name) => `pokemon/${name}`,
