@@ -74,7 +74,6 @@ function PokemonPage() {
       setLoading(true);
       const newData = [];
       if (pokemon && pokemon.results) {
-        setPokemonData([]);
         for (const result of pokemon.results) {
           const res = await fetch(result.url);
           const data = await res.json();
